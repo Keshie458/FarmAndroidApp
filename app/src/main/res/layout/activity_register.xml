@@ -12,8 +12,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELCOME!"
-        android:textSize="24sp"
+        android:text="@string/welcome"
+        android:textColor="@color/green"
+        android:textSize="34sp"
+        android:textStyle="bold"
         android:layout_marginBottom="20dp"
         android:gravity="center"/>
 
@@ -21,7 +23,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create an Account"
+        android:text="@string/create_an_account"
+        android:textColor="@color/green"
         android:textSize="18sp"
         android:layout_marginBottom="40dp"
         android:gravity="center"/>
@@ -32,7 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:ems="10"
+        android:textColor="@color/black"
         android:hint="Username"
+        android:background="@drawable/custom_edittext"
         android:inputType="text"
         android:minHeight="48dp" />
 
@@ -42,7 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
+        android:textColor="@color/black"
+        android:background="@drawable/custom_edittext"
         android:inputType="numberPassword"
         android:minHeight="48dp" />
 
@@ -50,14 +57,17 @@
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/switchToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account? Sign In"
+        android:text="@string/already_have_an_account_sign_in"
         android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold"
         android:gravity="center" />
 </LinearLayout>

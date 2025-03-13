@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
-    private List<Product> productList;
-    private DatabaseHelper db;
-    private Context context;
+    final private List<Product> productList;
+    final private DatabaseHelper db;
+    final private Context context;
 
     // Constructor
     public ProductAdapter(Context context, Cursor cursor, DatabaseHelper db) {
@@ -42,10 +42,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     // Method to update the product list and notify the adapter
-    public void updateData(Cursor cursor) {
+    /*public void updateData(Cursor cursor) {
         this.productList = getProductList(cursor);
         notifyDataSetChanged();
+    }*/
+    public void updateData(Cursor cursor) {
+        this.productList.clear();  // Clear old data
+        this.productList.addAll(getProductList(cursor));  // Add new data
+        notifyDataSetChanged();  // Force UI refresh
     }
+
 
     @NonNull
     @Override

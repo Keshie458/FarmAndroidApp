@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
             double price = Double.parseDouble(productPrice.getText().toString());
             if (db.addProduct(name, row, price)) {
                 Toast.makeText(this, "Product Added", Toast.LENGTH_SHORT).show();
-                updateProductList();  // Refresh product list
+                //updateProductList();  // This was not refreshing the recycler view
+                adapter.updateData(db.getAllProducts());
             } else {
                 Toast.makeText(this, "Failed to Add Product", Toast.LENGTH_SHORT).show();
             }

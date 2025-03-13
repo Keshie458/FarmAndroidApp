@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -81,7 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // CRUD Operations for Products
     // Add Product
-    public boolean addProduct(String name, String row, double price) {
+    /*public boolean addProduct(String name, String row, double price) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_PRODUCT_NAME, name);
@@ -89,13 +90,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_PRODUCT_PRICE, price);
         long result = db.insert(TABLE_PRODUCTS, null, values);
         return result != -1;  // Returns true if successful, false otherwise
+    }*/public boolean addProduct(String name, String row, double price) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("Name", name);
+        values.put("plantrow", row);
+        values.put("Price", price);
+        long result = db.insert("Products", null, values);
+
+        if (result == -1) {
+            Log.e("DatabaseHelper", "Failed to insert product");
+        } else {
+            Log.d("DatabaseHelper", "Product inserted successfully");
+        }
+
+        return result != -1;
     }
 
+
     // Get All Products
-    public Cursor getAllProducts() {
+    /*public Cursor getAllProducts() {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM " + TABLE_PRODUCTS, null);
+    }*/
+    public Cursor getAllProducts() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Products", null);
+
+        if (cursor.getCount() == 0) {
+            Log.e("DatabaseHelper", "No products found in the database");
+        } else {
+            Log.d("DatabaseHelper", "Products found: " + cursor.getCount());
+        }
+
+        return cursor;
     }
+
 
     // Update Product
     public boolean updateProduct(int id, String name, String row, double price) {

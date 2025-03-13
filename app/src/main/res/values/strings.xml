@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Farm Application</string>
+    <string name="grow_and_manage_plants_effortlessly">Grow and Manage plants effortlessly</string>
+    <string name="agrigrow">AgriGROW</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="login">Login</string>
+    <string name="product_name">Product Name</string>
+    <string name="row_1">Row: 1</string>
+    <string name="add_new_plant">Add New Plant</string>
+    <string name="add">Add</string>
+    <string name="product_list">Product List</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
 </resources>

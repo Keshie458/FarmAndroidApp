@@ -14,16 +14,19 @@
         android:layout_height="wrap_content"
         android:text="Farm Management App"
         android:textSize="22sp"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="56dp" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
+        android:layout_marginBottom="36dp"
         android:inputType="text"
+        android:textColor="@color/black"
+        android:background="@drawable/custom_edittext"
         android:minHeight="48dp" />
 
     <EditText
@@ -31,27 +34,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:textColor="@color/black"
+        android:background="@drawable/custom_edittext"
         android:inputType="textPassword"
         android:minHeight="48dp" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:layout_marginTop="8dp" />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="8dp" />
+
     <TextView
         android:id="@+id/switchToRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
+        android:textStyle="bold"
+        android:text="@string/don_t_have_an_account_sign_up"
         android:textColor="@android:color/holo_blue_light"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"/>

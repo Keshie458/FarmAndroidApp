@@ -4,58 +4,120 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/main"
-    >
+    android:gravity="start"
+    android:background="@color/grey">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/add_new_plant"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <!-- Plant Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/productName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Product Name"
+        android:background="@drawable/custom_edittext"
+        android:hint="Plant Name"
+        android:textColor="@color/black"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant row"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/productRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
         android:hint="Plant Row"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:textColor="@color/black"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant Price"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/productPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
         android:hint="Price"
+        android:textColor="@color/black"
         android:inputType="numberDecimal"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"/>
+
 
     <Button
         android:id="@+id/addProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Product" />
+        android:text="@string/add"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/mint"/>
 
     <Button
         android:id="@+id/downloadReport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Download Report"
-        android:layout_marginTop="8dp" />
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:layout_marginBottom="24dp"/>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Product List"
-        android:textSize="18sp"
+        android:text="@string/product_list"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"/>
 </LinearLayout>
